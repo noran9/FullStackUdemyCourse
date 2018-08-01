@@ -1,0 +1,45 @@
+body{
+	font-family: Arial;
+	background-color: lightgray;
+	color: #666;
+}
+
+input[type='text']{
+	padding: 4px;
+	display: block;
+	width: 95%;
+	margin: 10px;
+	border: 1px #666 solid;
+	border-radius: 5px
+}
+
+ul.messages li{
+	list-style-type: none;
+	padding: 5px 0;
+	margin: 4px 0;
+	background: #ddd;
+}
+
+ul{
+	margin: 0;
+	padding: 0;
+}
+
+footer{
+	margin-top: 40px;
+	text-align: center;
+}
+
+.alert{
+	background-color: orange;
+	color: white;
+	padding: 5px;
+	margin: 10px 0;
+}
+
+.success{
+	background-color: green;
+	color: white;
+	padding: 5px;
+	margin: 10px 0;
+}

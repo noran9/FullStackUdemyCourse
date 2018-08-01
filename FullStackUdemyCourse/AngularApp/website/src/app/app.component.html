@@ -1,0 +1,29 @@
+<div class="top-bar">
+<div class="top-bar-left">
+<ul class="menu">
+<li class="menu-text">Website</li>
+<li><a routerLink ="/">Home</a></li>
+<li><a routerLink ="/about">About</a></li>
+<li><a routerLink = "/services">Services</a></li>
+</ul>
+</div>
+</div>
+
+
+<div class="row">
+  <div class="columns medium-8"><br>
+    <router-outlet></router-outlet>
+  </div>
+  <div class="columns medium-4"><br>
+    <sidebar></sidebar>
+  </div>
+</div><br>
+
+
+<footer>
+  <div class="row">
+    <div class="columns medium-12 secondary callout">
+      <p>My Website &copy: 2018</p>
+    </div>
+  </div>
+</footer>

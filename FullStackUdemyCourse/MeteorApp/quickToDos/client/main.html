@@ -1,0 +1,48 @@
+<head>
+  <title>QuickToDos</title>
+</head>
+
+<body>
+  <div class="container"> 
+    {{> main}}
+  </div>
+</body>
+
+<template name="main">
+  <header>
+    {{> loginButtons}}
+    <hr>
+    <h1>{{title}}</h1>
+    {{#if currentUser}}
+      <form class="add-todo form-inline">
+        <input type="text" name="text" placeholder="Add To Do" class="form-control">
+        <input type="text" name="time" placeholder="Add Time" class="form-control">
+        <button type="submit" class="btn btn-primary">Add</button>
+      </form>
+      <br>
+    {{/if}}
+  </header>
+  <ul class="list-group">
+    {{#each todos}}
+      {{> todo}}
+    {{/each}}
+  </ul>
+</template>
+
+
+<template name="todo">
+  <li class="{{#if checked}}checked{{/if}} list-group-item">
+    {{#if isOwner}}
+    <button class="delete btn btn-danger">&times;</button>
+    <input type="checkbox" checked="{{checked}}" class="toggle-checked">
+    <button class="toggle-private btn btn-warning">
+      {{#if private}}
+        Private
+      {{else}}
+        Public
+      {{/if}}
+    </button>
+    {{/if}}
+    <strong>{{username}}: </strong>{{title}} <span>[{{time}}]</span>
+  </li>
+</template>

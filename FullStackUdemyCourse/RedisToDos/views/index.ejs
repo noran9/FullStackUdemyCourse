@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="https://bootswatch.com/4/sketchy/bootstrap.min.css">
+</head>
+<body>
+	<div class="container"><br>
+		<h1 class="text-center"><%= title%></h1>
+		<form method="post" action="/todo/add">
+			<input type="text" class="form-control" name="todo" placeholder="Add todo...">
+		</form><br>
+
+		<form method="post" action="/todo/delete">
+			<% todos.forEach(function(todo){ %>
+				<div class="card card-body">&nbsp <%= todo %>
+					<input type="checkbox" name="todos" class="delete" value="<%= todo %>">
+				</div><br>
+			<% }) %>
+			<input type="submit" value="Delete" class="btn btn-danger">
+		</form><br>
+	</div>
+</body>
+</html>

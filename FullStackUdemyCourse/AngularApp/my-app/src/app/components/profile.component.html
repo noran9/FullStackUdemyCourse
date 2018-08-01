@@ -1,0 +1,19 @@
+<div class="container">
+  	<h1>{{title}}</h1>
+  	<img src={{person.avatar}}>,
+  	<p>{{person.name}} || {{person.age}}</p>
+  	<div *ngIf="showAddress">
+	  	<h3>Adress</h3>
+	  	<ul>
+	  		<li>{{person.adress.street}}</li>
+	  		<li>{{person.adress.city}}</li>
+	  		<li>{{person.adress.state}}</li>
+	  	</ul>
+  	</div>
+  	<h3>Friendssss</h3>
+  	<ul>
+  		<li *ngFor="let friend of person.friends">
+  			{{friend.name}}
+  		</li>
+  	</ul>
+  </div>
